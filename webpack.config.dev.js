@@ -17,16 +17,16 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      'components': path.resolve(__dirname, 'src/components/'),
-      'helpers': path.resolve(__dirname, 'src/helpers/'),
-      'images': path.resolve(__dirname, 'src/assets/images/'),
-      'mocks': path.resolve(__dirname, 'src/mocks/'),
-      'redux': path.resolve(__dirname, 'src/redux/'),
-      'routes': path.resolve(__dirname, 'src/routes/'),
-      'saga': path.resolve(__dirname, 'src/saga/'),
-      'styles': path.resolve(__dirname, 'src/styles/'),
-      'types': path.resolve(__dirname, 'src/types/'),
-      'views': path.resolve(__dirname, 'src/views/'),
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@helpers': path.resolve(__dirname, 'src/helpers/'),
+      '@images': path.resolve(__dirname, 'src/assets/images/'),
+      '@mocks': path.resolve(__dirname, 'src/mocks/'),
+      '@redux': path.resolve(__dirname, 'src/redux/'),
+      '@routes': path.resolve(__dirname, 'src/routes/'),
+      '@saga': path.resolve(__dirname, 'src/saga/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+      '@types': path.resolve(__dirname, 'src/types/'),
+      '@views': path.resolve(__dirname, 'src/views/'),
     }
   },
   module: {
@@ -74,7 +74,9 @@ module.exports = {
       ]
     }),
     new Dotenv(),
-    new TsconfigPathsPlugin()
+    new TsconfigPathsPlugin({
+      extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
+    })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
