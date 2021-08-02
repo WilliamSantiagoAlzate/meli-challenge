@@ -25,7 +25,6 @@ export const items = (state: itemsState = initialState, action: any) => {
 				...state,
 				items: [],
         loadingItems: true,
-				totalPages: 0,
 			}
 		case SUCCESS_SEARCH_ITEM:
 			return {
