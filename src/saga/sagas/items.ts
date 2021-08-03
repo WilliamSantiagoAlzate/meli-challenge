@@ -13,7 +13,7 @@ import {
 } from '../../types';
 import { apiCall } from '../apiCall';
 
-const apiUrl: string | undefined = process.env.REACT_APP_API_URL;
+const apiUrl: string = 'http://localhost:4000';
 
 export function * searchItemRequest({ payload }: searchItemAction): Generator<any, any, any> {
   const { query } = payload;
