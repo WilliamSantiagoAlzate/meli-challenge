@@ -26,3 +26,7 @@ export type itemsState = {
 export type stateToProps = {
   items: itemsState
 }
+
+export enum spinnerColors {
+  black = 'black'
+}

@@ -1,6 +1,10 @@
+import Header from "../components/Layout/Header";
+import Items from "../components/Results/Items";
+
 const ResultsView: React.FC = () => (
   <main>
-    <h5>Results</h5>
+    <Header />
+    <Items />
   </main>
 );
 

@@ -13,7 +13,7 @@ import {
 } from '../../types';
 import { apiCall } from '../apiCall';
 
-const apiUrl: string = 'http://localhost:4000';
+const apiUrl: string = 'http://localhost:4000/api';
 
 export function * searchItemRequest({ payload }: searchItemAction): Generator<any, any, any> {
   const { query } = payload;

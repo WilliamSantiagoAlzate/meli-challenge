@@ -1,0 +1,27 @@
+.spinner {
+  @include flex-center;
+  width: 100%;
+  position: relative;
+  height: 80px;
+
+  &__container {
+    @include flex-center;
+    padding: 30px 0;
+  }
+
+  &-black{
+    @include spinner;
+    width: 60px;
+    height: 60px;
+    border-color: $black transparent transparent transparent;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -8,7 +8,7 @@ import ResultsView from '../views/Results';
 export const Routes: React.FC = () => (
   <Switch>
     <Route component={HomeView} path="/" exact />
-    <Route component={ResultsView} path="/items?search=" exact />
+    <Route component={ResultsView} path="/items" exact />
     <Route component={DetailView} path="/items/:id" />
     <Route component={NotFoundView} />
   </Switch>

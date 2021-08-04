@@ -1,0 +1,29 @@
+.item-card {
+  display: flex;
+  width: 100%;
+  font-size: 1.8rem;
+  background-color: $white;
+  padding: 16px;
+  border-bottom: 1px solid $gray4;
+
+  &__aside {
+    padding-right: 16px;
+  }
+
+  &__image {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+  }
+
+  &__price {
+    font-size: 2.1rem;
+    font-weight: normal;
+    margin-bottom: 32px;
+  }
+  
+  &__shipping {
+    width: 15px;
+    margin-left: 10px;
+  }
+}

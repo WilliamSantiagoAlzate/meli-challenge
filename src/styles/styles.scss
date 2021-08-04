@@ -1,0 +1,14 @@
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/base";
+
+@import "./components/notFound/notFound";
+@import "./components/header/header";
+@import "./components/searchInput/searchInput";
+@import "./components/itemCard/itemCard";
+@import "./components/spinner/spinner";
+@import "./components/items/items";
+
+@media (min-width: 1024px) {
+  @import "./components/styles-desktop";
+}
