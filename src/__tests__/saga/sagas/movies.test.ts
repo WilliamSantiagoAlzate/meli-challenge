@@ -17,7 +17,7 @@ import {
   getItemByIdRequest 
 } from '../../../saga/sagas/items';
 
-const apiUrl: string = 'http://localhost:4000';
+const apiUrl: string = 'http://localhost:4000/api';
 
 describe('Search items request', () => {
   const query: string = 'item';

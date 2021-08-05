@@ -7,7 +7,7 @@ import {
   ERROR_GET_ITEM_BY_ID
 } from '../../../redux/consts';
 import { items, initialState } from '../../../redux/reducers/items';
-import { item, items as itemsData } from '../../../mocks/data';
+import { item, items as itemsData } from '../../../__mocks__/data';
 
 //Do test of app reducer
 describe('Items reducers', () => {
@@ -26,7 +26,7 @@ describe('Items reducers', () => {
   });
 
   test('Set new items and remove loading items for search', () => {
-    const result = itemsData;
+    const result = { items: itemsData};
     expect(
       items(initialState, { type: SUCCESS_SEARCH_ITEM, result})
     ).toEqual({
@@ -55,7 +55,7 @@ describe('Items reducers', () => {
   });
 
   test('Set new item and remove loading item', () => {
-    const result = item;
+    const result = { item: item };
     expect(
       items(initialState, { type: SUCCESS_GET_ITEM_BY_ID, result})
     ).toEqual({

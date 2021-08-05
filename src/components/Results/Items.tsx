@@ -1,3 +1,4 @@
+import React from 'react';
 import { connect } from "react-redux";
 import ItemCard from './ItemCard';
 import Spinner from '../UI/Spinner';

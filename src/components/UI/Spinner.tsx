@@ -1,3 +1,4 @@
+import React from 'react';
 import { spinnerColors } from '../../types';
 
 type SpinnerProps = {

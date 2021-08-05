@@ -1,6 +1,13 @@
 export const item = {
   id: 1,
-  name: ''
+  title: 'Title',
+  picture: 'Image',
+  condition: 'New',
+  free_shipping: true,
+  price: {
+    amount: 1000,
+    currency: 'ARS'
+  }
 }
 
 export const items = [item];

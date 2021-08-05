@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from "../components/Layout/Header";
 import Items from "../components/Results/Items";
 
