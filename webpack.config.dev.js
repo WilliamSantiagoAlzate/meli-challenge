@@ -1,16 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/images/[hash][ext][query]'
+    filename: '[name].[contenthash].js'
   },
   mode: 'development',
   watch: true,
@@ -19,7 +16,6 @@ module.exports = {
     alias: {
       '@components': path.resolve(__dirname, 'src/components/'),
       '@helpers': path.resolve(__dirname, 'src/helpers/'),
-      '@images': path.resolve(__dirname, 'src/assets/images/'),
       '@mocks': path.resolve(__dirname, 'src/mocks/'),
       '@redux': path.resolve(__dirname, 'src/redux/'),
       '@routes': path.resolve(__dirname, 'src/routes/'),
@@ -50,10 +46,6 @@ module.exports = {
           'sass-loader'
         ],
       },
-      {
-        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-        use: ["file-loader"],
-      },
     ]
   },
   plugins: [
@@ -65,15 +57,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].[contenthash].css'
     }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "src", "assets/images"),
-          to: "assets/images"
-        }
-      ]
-    }),
-    new Dotenv(),
     new TsconfigPathsPlugin({
       extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
     })

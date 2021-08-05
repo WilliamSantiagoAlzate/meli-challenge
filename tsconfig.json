@@ -24,7 +24,6 @@
     "paths": {
       "@components": ["components/*"],
       "@helpers": ["helpers/*"],
-      "@images": ["assets/images/*"],
       "@mocks": ["mocks/*"],
       "@redux": ["redux/*"],
       "@routes": ["routes/*"],

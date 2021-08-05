@@ -30,7 +30,7 @@ export const items = (state: itemsState = initialState, action: any) => {
 			return {
         ...state,
 				loadingItems: false,
-				items: result,
+				items: result.items,
 			}
     case ERROR_SEARCH_ITEM:
 			return {
@@ -47,7 +47,7 @@ export const items = (state: itemsState = initialState, action: any) => {
 			return {
         ...state,
 				loadingItem: false,
-				item: result
+				item: result.item
 			}
     case ERROR_GET_ITEM_BY_ID:
 			return {

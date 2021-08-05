@@ -1,0 +1,25 @@
+.search-input {
+  @include flex-between;
+  width: 300px;
+  height: 40px;
+  background-color: $white;
+  padding-left: 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+
+  &__icon {
+    @include flex-center;
+    width: 40px;
+    height: 100%;
+    background-color: $gray4;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  &__container {
+    font-size: 1.8rem;
+    width: calc(100% - 70px);
+  }
+}

@@ -7,7 +7,7 @@ console.log(apiUrl);
 items.getItemByQuery = app => {
   app.get('/api/items', async (req, res) => {
     try {
-      const response = await axios({ method: 'GET', url: `${apiUrl}/sites/MLA/search?q=${req.query.q}` });
+      const response = await axios({ method: 'GET', url: `${apiUrl}/sites/MLA/search?q=${req.query.q}&limit=4` });
       const responseDate = response.data
       const data = {
         author: {

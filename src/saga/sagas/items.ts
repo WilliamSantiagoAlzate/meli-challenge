@@ -13,7 +13,7 @@ import {
 } from '../../types';
 import { apiCall } from '../apiCall';
 
-const apiUrl: string = 'http://localhost:4000';
+const apiUrl: string = 'http://localhost:4000/api';
 
 export function * searchItemRequest({ payload }: searchItemAction): Generator<any, any, any> {
   const { query } = payload;
@@ -39,7 +39,6 @@ export function * getItemByIdRequest({ payload }: getItemByIdAction): Generator<
   }
 }
 
-// Create watchers
 export default function * items() {
   yield takeLatest(START_SEARCH_ITEM, searchItemRequest);
   yield takeLatest(START_GET_ITEM_BY_ID, getItemByIdRequest);

@@ -17,7 +17,7 @@ import {
   getItemByIdRequest 
 } from '../../../saga/sagas/items';
 
-const apiUrl: string = 'http://localhost:4000';
+const apiUrl: string = 'http://localhost:4000/api';
 
 describe('Search items request', () => {
   const query: string = 'item';
@@ -41,7 +41,7 @@ describe('Search items request', () => {
 })
 
 describe('Get item by id request', () => {
-  const id: number = 1;
+  const id: string = 'A';
   const action: getItemByIdAction = { type: START_GET_ITEM_BY_ID, payload: { id }};
   
   it('Success response', () => {

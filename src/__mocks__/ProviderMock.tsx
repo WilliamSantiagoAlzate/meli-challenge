@@ -1,11 +1,12 @@
+import React from 'react';
 import { createStore, Store } from 'redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
-import { rootReducer } from '../redux/reducers';
+import { items } from '../redux/reducers/items';
 import { state } from './data';
 
-export const initialStore: Store = createStore(rootReducer);
+export const initialStore: Store = createStore(items);
 
 export const ProviderMock: React.FC = ({ children }) => (
   <Provider store={initialStore}>

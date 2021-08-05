@@ -3,7 +3,7 @@ export type searchItemPayload = {
 }
 
 export type getItemByIdPayload = {
-  id: number
+  id: string
 }
 
 export type searchItemAction = {
@@ -23,6 +23,10 @@ export type itemsState = {
   loadingItem: boolean
 }
 
-export type stateToProps = {
-  items: itemsState
+export type params = {
+  id: string
+}
+
+export enum spinnerColors {
+  black = 'black'
 }
