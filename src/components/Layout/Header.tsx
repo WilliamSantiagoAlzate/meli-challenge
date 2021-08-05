@@ -55,7 +55,6 @@ const Header: React.FC<HeaderProps> = ({
   )
 };
 
-// Map Redux actions with dispatch funcion to component props
 const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
   searchItem(query: string) {
     dispatch(searchItem({ query }))

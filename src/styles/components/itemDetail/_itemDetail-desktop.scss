@@ -1,0 +1,13 @@
+.item-detail {
+  @include grid(2);
+  margin: 20px 150px;
+  padding: 32px;
+
+  &__image {
+    width: 680px;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

@@ -13,10 +13,8 @@ export const item = {
 export const items = [item];
 
 export const state = {
-  items: {
-    items,
-    loadingItems: false,
-    item,
-    loadingItem: false,
-  }
+  items,
+  loadingItems: false,
+  item,
+  loadingItem: false
 }

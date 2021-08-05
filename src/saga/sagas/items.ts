@@ -39,7 +39,6 @@ export function * getItemByIdRequest({ payload }: getItemByIdAction): Generator<
   }
 }
 
-// Create watchers
 export default function * items() {
   yield takeLatest(START_SEARCH_ITEM, searchItemRequest);
   yield takeLatest(START_GET_ITEM_BY_ID, getItemByIdRequest);

@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-// Views
 import HomeView from '../views/Home';
 import DetailView from '../views/Detail';
 import NotFoundView from '../views/NotFound';

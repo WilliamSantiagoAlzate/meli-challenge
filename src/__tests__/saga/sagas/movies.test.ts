@@ -41,7 +41,7 @@ describe('Search items request', () => {
 })
 
 describe('Get item by id request', () => {
-  const id: number = 1;
+  const id: string = 'A';
   const action: getItemByIdAction = { type: START_GET_ITEM_BY_ID, payload: { id }};
   
   it('Success response', () => {

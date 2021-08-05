@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import ItemCard from './ItemCard';
 import Spinner from '../UI/Spinner';
-import { stateToProps, spinnerColors } from '../../types'
+import { itemsState, spinnerColors } from '../../types'
 
 type ItemsProps = {
   items?: any[]
@@ -37,10 +37,9 @@ const Items: React.FC<ItemsProps> = ({
   </>
 );
 
-// Map state from global state to component props
-const mapStateToProps = (state: stateToProps) => ({
-  items: state.items.items,
-  loadingItems: state.items.loadingItems
+const mapStateToProps = (state: itemsState) => ({
+  items: state.items,
+  loadingItems: state.loadingItems
 });
 
 export default connect(mapStateToProps, null)(Items);

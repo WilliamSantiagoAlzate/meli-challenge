@@ -27,7 +27,7 @@ describe('Items actions', () => {
   });
   test('Should run the get item by id action', () => {
     const store = mockStore({ });
-    const payload: getItemByIdPayload = { id: 1 }
+    const payload: getItemByIdPayload = { id: 'A' }
     store.dispatch(getItemById(payload));
 
     const actions = store.getActions();
